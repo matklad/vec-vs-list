@@ -8,7 +8,7 @@ need to move elements when we insert into the middle of the collection. With
 Results on my machine:
 
 ```
-❯ cargo run --release                                                                                                                               ~/projects/untitled
+❯ cargo run --release
     Finished release [optimized] target(s) in 0.0 secs
      Running `target/release/bench`
 Generate random elements    744 μs
