@@ -1,5 +1,5 @@
 [root]
-name = "untitled"
+name = "bench"
 version = "0.1.0"
 dependencies = [
  "linked-list 0.0.3 (registry+https://github.com/rust-lang/crates.io-index)",

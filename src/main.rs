@@ -6,7 +6,7 @@ use std::iter::FromIterator;
 use linked_list::LinkedList;
 
 fn main() {
-    let xs = time_it("Generate random elements", || elements());
+    let xs = time_it("Generate random elements   ", || elements());
     let vs = time_it("Collecting to sorted vector", || process_vec(&xs));
     let ls = time_it("Collecting to sorted list  ", || process_linked_list(&xs));
 
@@ -50,6 +50,6 @@ fn time_it<R, F: FnOnce() -> R>(tag: &str, f: F) -> F::Output {
     let result = f();
     let duration = Instant::now() - start;
     assert!(duration.as_secs() == 0);
-    println!("{} {} 1μs", tag, duration.subsec_nanos() / 1000);
+    println!("{} {} μs", tag, duration.subsec_nanos() / 1000);
     result
 }
